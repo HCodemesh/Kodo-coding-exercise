@@ -36,12 +36,10 @@ const generateSearchQuery = str => {
 
 		if (str.charAt(0) === '"' && str.charAt(str.length - 1) === '"') {
 			str = str.substr(1, str.length - 2);
-			searchQuery.name = new RegExp(str, 'i');
-			searchQuery.description = new RegExp(str, 'i');
+			searchQuery['$or'] = [{ name: new RegExp(str, 'i') }, { description: new RegExp(str, 'i') }];
 		} else {
 			let temp = str.split(' ');
-			searchQuery.name = new RegExp(temp.join('|'), 'i');
-			searchQuery.description = new RegExp(temp.join('|'), 'i');
+			searchQuery['$or'] = [{ name: new RegExp(temp.join('|'), 'i') }, { description: new RegExp(temp.join('|'), 'i') }];
 		}
 	}
 	return searchQuery;
