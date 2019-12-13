@@ -8,7 +8,7 @@ module.exports = async (ctx, next) => {
 			console.log(err);
 		} else {
 			ctx.status = 400;
-			ctx.body = { errorCode: err.status, message: err.message };
+			ctx.body = err.message;
 		}
 	}
 };
