@@ -1,0 +1,47 @@
+{
+    "name": "bizzelevate-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "NODE_ENV=local TZ=UTC LOCALE=EN nodemon --inspect src/app.js",
+        "test": "NODE_ENV=test mocha src/*/test/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/prashantvikram/bizzelevate-server.git"
+    },
+    "author": "Prashant Vikram",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/prashantvikram/bizzelevate-server/issues"
+    },
+    "homepage": "https://gitlab.com/prashantvikram/bizzelevate-server#readme",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "http-error-constructor": "^0.1.0",
+        "koa": "^2.7.0",
+        "koa-bearer-token": "^1.0.0",
+        "koa-body": "^4.0.7",
+        "koa-compress": "^3.0.0",
+        "koa-custom-statuses": "^1.5.2",
+        "koa-mount": "^4.0.0",
+        "koa-response-time": "^2.1.0",
+        "koa-router": "^7.4.0",
+        "koa-sslify": "^4.0.3",
+        "koa-static": "^5.0.0",
+        "koa-static-server": "^1.4.0",
+        "koa-statuses": "^1.0.2",
+        "koa-useragent": "^1.2.1",
+        "koa2-cors": "^2.0.6",
+        "koa2-ratelimit": "^0.9.0",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.26",
+        "mongoose": "^5.6.11",
+        "saslprep": "^1.0.3"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1"
+    }
+}
